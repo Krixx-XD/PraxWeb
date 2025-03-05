@@ -45,7 +45,7 @@
                 border-color: red;
             }
             50% {
-                border-color: darkred;
+                border-color: #8B0000; /* Dark red */
             }
             100% {
                 border-color: red;
@@ -58,8 +58,9 @@
             animation: borderAnimation 1s ease-in-out; /* Apply animation */
         }
 
-        nav a:active {
-            border-color: darkred; /* Dark red border when active */
+        /* To keep dark red border after hover */
+        nav a:hover, nav a:active {
+            border-color: #8B0000; /* Dark red */
         }
 
         .content {
