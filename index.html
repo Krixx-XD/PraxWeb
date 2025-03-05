@@ -35,16 +35,33 @@
             margin: 0 15px;
             font-size: 18px;
             border-radius: 5px;
-            transition: background-color 0.3s, border-color 0.3s;
             border: 2px solid transparent; /* Initial border */
+            transition: background-color 0.3s, border-color 0.3s; /* Basic transition */
         }
+
+        /* Keyframe animation for border color change */
+        @keyframes borderAnimation {
+            0% {
+                border-color: red;
+            }
+            50% {
+                border-color: darkred;
+            }
+            100% {
+                border-color: red;
+            }
+        }
+
+        /* Hover effect with animation */
         nav a:hover {
             background-color: #666;
-            border-color: red; /* Red border on hover */
+            animation: borderAnimation 1s ease-in-out; /* Apply animation */
         }
+
         nav a:active {
-            border-color: red; /* Ensure border stays red when active */
+            border-color: darkred; /* Dark red border when active */
         }
+
         .content {
             width: 80%;
             padding: 20px;
@@ -54,6 +71,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         footer {
             background-color: #333;
             color: white;
