@@ -35,10 +35,15 @@
             margin: 0 15px;
             font-size: 18px;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, border-color 0.3s;
+            border: 2px solid transparent; /* Initial border */
         }
         nav a:hover {
             background-color: #666;
+            border-color: red; /* Red border on hover */
+        }
+        nav a:active {
+            border-color: red; /* Ensure border stays red when active */
         }
         .content {
             width: 80%;
@@ -62,13 +67,13 @@
 <body>
 
 <header>
-    <h1>My Simple Website</h1>
+    <h1>Prax Client</h1>
 </header>
 
 <nav>
-    <a href="#home" onclick="showTab('home')">Home</a>
-    <a href="#youtube" onclick="showTab('youtube')">YouTube</a>
-    <a href="#discord" onclick="showTab('discord')">Discord</a>
+    <a href="#home" onclick="showTab('Home')">Home</a>
+    <a href="#youtube" onclick="showTab('Youtube')">YouTube</a>
+    <a href="#discord" onclick="showTab('Discord')">Discord</a>
 </nav>
 
 <div class="content" id="Home">
@@ -78,7 +83,7 @@
 
 <div class="content" id="Youtube" style="display: none;">
     <h2>Subscribe to my channel for more updates</h2>
-    <p>Visit <a href="https://www.youtube.com/@AhasiUGO">YouTube</a> for videos.</p>
+    <p>Visit <a href="https://www.youtube.com/@AhasiUGO" target="_blank">YouTube</a> for videos.</p>
 </div>
 
 <div class="content" id="Discord" style="display: none;">
