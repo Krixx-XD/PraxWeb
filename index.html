@@ -1,127 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prax Client - #3 Client for BlockmanGO</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            width: 100%;
-            padding: 15px 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #444;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 15px;
-            font-size: 18px;
-            border-radius: 5px;
-            border: 2px solid transparent; /* Initial border */
-            transition: background-color 0.3s, border-color 0.3s; /* Basic transition */
-        }
-
-        /* Keyframe animation for border color change */
-        @keyframes borderAnimation {
-            0% {
-                border-color: red;
-            }
-            50% {
-                border-color: #8B0000; /* Dark red */
-            }
-            100% {
-                border-color: red;
-            }
-        }
-
-        /* Hover effect with animation */
-        nav a:hover {
-            background-color: #666;
-            animation: borderAnimation 1s ease-in-out; /* Apply animation */
-        }
-
-        /* To keep dark red border after hover */
-        nav a:hover, nav a:active {
-            border-color: #8B0000; /* Dark red */
-        }
-
-        .content {
-            width: 80%;
-            padding: 20px;
-            text-align: center;
-            margin-top: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            width: 100%;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prax Client</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <nav>
+      <div class="logo">Prax Client</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="hero">
+      <h1>Welcome to Prax Client</h1>
+      <p>Your simple client solution, redefined.</p>
+    </section>
+  </header>
 
-<header>
-    <h1>Prax Client</h1>
-</header>
+  <main>
+    <section id="about" class="about">
+      <h2>About Us</h2>
+      <p>Prax Client is a lightweight and effective web platform designed for seamless client communication and service integration.</p>
+    </section>
 
-<nav>
-    <a href="#home" onclick="showTab('Home')">Home</a>
-    <a href="#youtube" onclick="showTab('Youtube')">YouTube</a>
-    <a href="#discord" onclick="showTab('Discord')">Discord</a>
-</nav>
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p id="formMessage"></p>
+    </section>
+  </main>
 
-<div class="content" id="Home">
-    <h2>Welcome to Prax Home</h2>
-    <p>Official website to download the #3 Panel for BlockmanGO</p>
-</div>
+  <footer>
+    <p>© 2025 Prax Client. All rights reserved.</p>
+  </footer>
 
-<div class="content" id="Youtube" style="display: none;">
-    <h2>Subscribe to my channel for more updates</h2>
-    <p>Visit <a href="https://www.youtube.com/@AhasiUGO" target="_blank">YouTube</a> for videos.</p>
-</div>
-
-<div class="content" id="Discord" style="display: none;">
-    <h2>Discord Tab</h2>
-    <p>Join the community on <a href="https://discord.gg/Tx3vrAKKeh" target="_blank">Discord</a>.</p>
-</div>
-
-<footer>
-    <p>&copy; 2025 Rage. All rights reserved.</p>
-</footer>
-
-<script>
-    function showTab(tab) {
-        const tabs = ['Home', 'Youtube', 'Discord'];
-        tabs.forEach(function(tabName) {
-            document.getElementById(tabName).style.display = (tabName === tab) ? 'block' : 'none';
-        });
-    }
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
